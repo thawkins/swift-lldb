@@ -101,9 +101,9 @@ else
 
     if [ -n "${PYTHON_INSTALL_DIR}" ]
     then
-        framework_python_dir=`${PYTHON} -c "from distutils.sysconfig import get_python_lib; print get_python_lib(True, False, \"${PYTHON_INSTALL_DIR}\");"`/lldb
+        framework_python_dir=`${PYTHON} -c "from distutils.sysconfig import get_python_lib; print get_python_lib(False, False, \"${PYTHON_INSTALL_DIR}\");"`/lldb
     else
-        framework_python_dir=`${PYTHON} -c "from distutils.sysconfig import get_python_lib; print get_python_lib(True, False);"`/lldb
+        framework_python_dir=`${PYTHON} -c "from distutils.sysconfig import get_python_lib; print get_python_lib(False, False);"`/lldb
     fi
 fi
 
